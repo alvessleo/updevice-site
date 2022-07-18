@@ -109,6 +109,7 @@ section.hero .button-hero {
   line-height: 33px;
   margin-top: 30px;
   transition: 1s;
+  color: black;
 }
 section.hero .button-hero:hover {
   cursor: pointer;
