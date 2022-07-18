@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Apple store</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="hero-img"></div>
+        <div class="wrapper">
+            <header>
+                <a href="#" class="logo">Apple<span>Store</span></a>
+
+                <nav>
+                    <svg class="close" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.574 13.5L26.0843 0.971778C26.2605 0.763574 26.1123 0.447266 25.8401 0.447266H22.6449C22.4568 0.447266 22.2766 0.531348 22.1525 0.675488L13.484 11.0096L4.81554 0.675488C4.69543 0.531348 4.51525 0.447266 4.32306 0.447266H1.12795C0.85568 0.447266 0.707535 0.763574 0.883707 0.971778L11.394 13.5L0.883707 26.0282C0.844243 26.0746 0.818925 26.1314 0.810759 26.1918C0.802592 26.2521 0.81192 26.3136 0.837635 26.3688C0.863351 26.424 0.904374 26.4707 0.955834 26.5033C1.00729 26.5359 1.06703 26.5531 1.12795 26.5527H4.32306C4.51125 26.5527 4.69142 26.4687 4.81554 26.3245L13.484 15.9904L22.1525 26.3245C22.2726 26.4687 22.4528 26.5527 22.6449 26.5527H25.8401C26.1123 26.5527 26.2605 26.2364 26.0843 26.0282L15.574 13.5Z" fill="black"/>
+                    </svg> 
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>  
+                </nav>
+
+                <svg class="menu" viewBox="0 0 48 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M24 32H0V26.6667H24V32ZM48 18.6667H0V13.3333H48V18.6667ZM48 5.33333H24V0H48V5.33333Z" fill="white"/>
+                </svg>
+            </header>
+
+            <section class="hero">
+                <h1>Regain your confidence on the court.</h1>
+
+                <p class="subhead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta temporibus quo itaque iste.</p>
+
+                <svg class="down-arrow" viewBox="0 0 16 132" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.29289 131.707C7.68341 132.098 8.31658 132.098 8.7071 131.707L15.0711 125.343C15.4616 124.953 15.4616 124.319 15.0711 123.929C14.6805 123.538 14.0474 123.538 13.6568 123.929L7.99999 129.586L2.34314 123.929C1.95262 123.538 1.31945 123.538 0.928927 123.929C0.538402 124.319 0.538402 124.953 0.928927 125.343L7.29289 131.707ZM7 -4.37114e-08L6.99999 131L8.99999 131L9 4.37114e-08L7 -4.37114e-08Z" fill="black"/>
+                </svg> 
+            </section>
+
+            <section class="more-info">
+                <div class="feature">
+                    <div class="content">
+                        <p class="title">Lightweight</p>
+                        <p class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea corrupti nostrum explicabo itaque illum doloribus!</p>
+                    </div>
+                    <img src="img/iphone.jpg" alt="black iphone">
+                </div>
+                <div class="feature left">
+                    <div class="content">
+                        <p class="title">Lightweight</p>
+                        <p class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea corrupti nostrum explicabo itaque illum doloribus!</p>
+                    </div>
+                    <img src="img/macbook.jpg" alt="macbook">
+                </div>
+                <div class="feature">
+                    <div class="content">
+                        <p class="title">Lightweight</p>
+                        <p class="desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea corrupti nostrum explicabo itaque illum doloribus!</p>
+                    </div>
+                    <img src="img/apple-watch.jpg" alt="apple watch">
+                </div>
+            </section>
+        </div>
+
+        <script>
+            const menu = document.querySelector('.menu')
+            const close = document.querySelector('.close')
+            const nav = document.querySelector('nav')
+
+            menu.addEventListener('click', () => {
+                nav.classList.add('open-nav')
+            })
+
+            close.addEventListener('click', () => {
+                nav.classList.remove('open-nav')
+            })
+        </script>
+    </body>
+</html>
