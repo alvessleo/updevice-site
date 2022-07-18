@@ -2,11 +2,22 @@
 body{
     margin: 1.5em;
     font-family: 'Poppins', sans-serif;
+    background-color: #E8E8E8;
 }
 
 a{
     text-decoration: none;
     font-size: 1.3rem;
+}
+
+.background-white{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    z-index: -9;
+    top: 0;
+    left: 0;
 }
 
 .hero-img{
@@ -85,23 +96,38 @@ h1{
     font-size: 1.4rem;
 }
 
+
+
 section.hero{
     color: #fff;
     height: 90vh;
     animation: moveDown 1s ease-in-out forwards;
     opacity: 0;
 
-    .down-arrow{
-        stroke: white;
-        position: absolute;
-        bottom: 2em;
-        width: 1em;
-        animation: moveArrow 1.4s alternate-reverse infinite; // moveArrow é o nome da animação, alternate-reverse faz ele ir e voltar
-        
-        path{
-            fill: white;
+    .button-hero{
+        border: none;
+        width: 180px;
+        height: 40px;
+        background: #E7E7E7;
+        font-family: 'Poppins', sans-serif;
+        font-style: bold;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 33px;
+        margin-top: 30px;
+        transition: 1s;
+
+        &:hover{
+            cursor: pointer;
+            background: #688068;
+            color: white;
         }
     }
+
+    h1{
+        margin-top: 195px;
+    }
+
 }
 
 .more-info{
@@ -109,6 +135,26 @@ section.hero{
         width: 100%;
         object-fit: cover;
         height: 15em;
+    }
+
+    h1{
+        font-family: 'Poppins',sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 54px;
+        text-align: center;
+    }
+
+    .sub-paragraph{
+        font-family: 'Poppins', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        text-align: center;
+        letter-spacing: 0.11em;
+        text-transform: uppercase;
+        margin-top: -30px;
+        margin-bottom: 130px;
     }
 
     .title{
@@ -130,6 +176,7 @@ section.hero{
         margin: 1.5em 5em;
         font-family: 'Poppins', sans-serif;
     }
+
 }
 
 @media only screen and (min-width: 920px){
@@ -166,35 +213,36 @@ section.hero{
         }
     }
 
+    .green-line{
+        position: absolute;
+        width: 12px;
+        height: 335px;
+        background: #688068;
+        left: 0px;
+        top: 261px;
+    }
+
     .hero-img{
         left: unset;
         right: 0;
         width: 50%;
-        height: 42em;
+        height: 100vh;
     }
 
     .logo{
         color: black;
 
-        span{
+        strong{
             color: rgb(30, 99, 30);
         }
     }
 
     section.hero{
         color: black;
-        height: auto;
+        height: 76vh;
         width: 40%;
         margin-bottom: 8em;
 
-        svg.down-arrow{
-            stroke: black;
-            position: unset;
-
-            path{
-                fill: black;
-            }
-        }
     }
 
     .feature{
@@ -218,6 +266,7 @@ section.hero{
 
         img{
             grid-area: left;
+            margin-left: 40px;
         }
 
         .content{
@@ -250,14 +299,6 @@ section.hero{
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     }to{
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    }
-}
-
-@keyframes moveArrow {
-    from{
-        transform: translateY(-20px);
-    }to{
-        transform: translateY(0);
     }
 }
 

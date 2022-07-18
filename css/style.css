@@ -1,11 +1,22 @@
 body {
   margin: 1.5em;
   font-family: "Poppins", sans-serif;
+  background-color: #E8E8E8;
 }
 
 a {
   text-decoration: none;
   font-size: 1.3rem;
+}
+
+.background-white {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+  z-index: -9;
+  top: 0;
+  left: 0;
 }
 
 .hero-img {
@@ -86,15 +97,26 @@ section.hero {
           animation: moveDown 1s ease-in-out forwards;
   opacity: 0;
 }
-section.hero .down-arrow {
-  stroke: white;
-  position: absolute;
-  bottom: 2em;
-  width: 1em;
-  animation: moveArrow 1.4s alternate-reverse infinite;
+section.hero .button-hero {
+  border: none;
+  width: 180px;
+  height: 40px;
+  background: #E7E7E7;
+  font-family: "Poppins", sans-serif;
+  font-style: bold;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 33px;
+  margin-top: 30px;
+  transition: 1s;
 }
-section.hero .down-arrow path {
-  fill: white;
+section.hero .button-hero:hover {
+  cursor: pointer;
+  background: #688068;
+  color: white;
+}
+section.hero h1 {
+  margin-top: 195px;
 }
 
 .more-info img {
@@ -102,6 +124,24 @@ section.hero .down-arrow path {
   -o-object-fit: cover;
      object-fit: cover;
   height: 15em;
+}
+.more-info h1 {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 54px;
+  text-align: center;
+}
+.more-info .sub-paragraph {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  margin-top: -30px;
+  margin-bottom: 130px;
 }
 .more-info .title {
   font-weight: bold;
@@ -149,30 +189,31 @@ section.hero .down-arrow path {
     background: none;
     text-decoration: underline;
   }
+  .green-line {
+    position: absolute;
+    width: 12px;
+    height: 335px;
+    background: #688068;
+    left: 0px;
+    top: 261px;
+  }
   .hero-img {
     left: unset;
     right: 0;
     width: 50%;
-    height: 42em;
+    height: 100vh;
   }
   .logo {
     color: black;
   }
-  .logo span {
+  .logo strong {
     color: rgb(30, 99, 30);
   }
   section.hero {
     color: black;
-    height: auto;
+    height: 76vh;
     width: 40%;
     margin-bottom: 8em;
-  }
-  section.hero svg.down-arrow {
-    stroke: black;
-    position: unset;
-  }
-  section.hero svg.down-arrow path {
-    fill: black;
   }
   .feature {
     display: grid;
@@ -192,6 +233,7 @@ section.hero .down-arrow path {
   }
   .feature.left img {
     grid-area: left;
+    margin-left: 40px;
   }
   .feature.left .content {
     text-align: left;
@@ -229,22 +271,6 @@ section.hero .down-arrow path {
   to {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
             clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-  }
-}
-@-webkit-keyframes moveArrow {
-  from {
-    transform: translateY(-20px);
-  }
-  to {
-    transform: translateY(0);
-  }
-}
-@keyframes moveArrow {
-  from {
-    transform: translateY(-20px);
-  }
-  to {
-    transform: translateY(0);
   }
 }
 @-webkit-keyframes moveDown {
