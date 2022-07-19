@@ -1,4 +1,8 @@
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     margin:  1.5em 1.5em 0 1.5em;
     font-family: 'Poppins', sans-serif;
@@ -179,10 +183,10 @@ section.hero{
 .background-about{
     position: absolute;
     background: url(../img/about-background.jpg);
-    width: 100%;
+    width: 0%;
     height: 100%;
     object-fit: cover;
-    z-index: -9;
+    z-index: -999;
     opacity: 25%;
 }
 
@@ -197,6 +201,7 @@ section.about{
     justify-content: center;
     align-items: center;
     margin-top: 3rem;
+
 
     .info-about{
         display: flex;
@@ -230,6 +235,7 @@ section.about{
             font-style: normal;
             font-weight: 400;
             font-size: 20px;
+            color: rgb(226, 226, 226);
         }
     }
 }

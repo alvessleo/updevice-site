@@ -27,8 +27,8 @@
                     </svg> 
                     <ul>
                         <li><a href="#">Home</a></li>
-                        <li><a href="#">Products</a></li>
-                        <li><a href="#">About</a></li>
+                        <li><a href="#hero">Products</a></li>
+                        <li><a href="#about">About</a></li>
                     </ul>  
                 </nav>
 
@@ -37,14 +37,14 @@
                 </svg>
             </header>
 
-            <section class="hero">
+            <section class="hero" >
                 <h1>Get your dream device.</h1>
                 <p class="subhead">Apple transforms people's lives, offering an awesome device and making everyone's life easier</p>
                 <button class="button-hero">Check it out ></button>
             </section>
 
             <section class="more-info">
-                <div class="info-title">
+                <div class="info-title" id="hero">
                     <h1>Your best experience</h1>
                     <p class="sub-paragraph">Get now your device with us</p>
                 </div>
@@ -74,7 +74,7 @@
         </div>
 
         <section class="about">
-            <div class="background-about"></div>
+            <div class="background-about" id="about"></div>
             <div class="info-about">
                 <p class="upper-title">About us</p>
                 <h1 class="company-title">UP Device company</h1>
@@ -110,6 +110,15 @@
             first.from('.first', {x: -150, opacity: 0, duration: 1})
             first.from('.second', {x: 150, opacity: 0, duration: 1}, "=-1")
             first.from('.third', {x: -150, opacity: 0, duration: 1}, "=-1")
+
+            gsap.to("#about", {
+                scrollTrigger: {
+                    trigger: '.about',
+                    start: "center bottom",
+                    scrub: 3,
+                },
+                width: 4900
+            });
             
         </script>
     </body>
