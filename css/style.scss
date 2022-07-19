@@ -3,6 +3,7 @@ body{
     margin: 1.5em;
     font-family: 'Poppins', sans-serif;
     background-color: #E8E8E8;
+    overflow: hidden;
 }
 
 a{
@@ -272,7 +273,7 @@ section.hero{
 
         .content{
             text-align: left;
-            width: 25em;
+            width: 17em;
             justify-self: left;
         }
     }
@@ -294,6 +295,7 @@ section.hero{
 
     
 }
+
 
 @keyframes introLoad {
     from{
